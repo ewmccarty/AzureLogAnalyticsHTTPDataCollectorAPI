@@ -1,9 +1,10 @@
 # AzureLogAnalyticsHTTPDataCollectorAPI
-<summary>
-<![CDATA[
-.NET Standard 2.0 Logger Provider for the Azure HTTP Data Collector API (public preview) in Log Analytics [https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-data-collector-api]
+.NET Standard 2.0 Logger Provider for the Azure HTTP Data Collector API (public preview) in Log Analytics 
 
-An <see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" /> that writes logs to the
+https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-data-collector-api
+(Much of the content from the above page is copied herein as the author may make changes)
+
+An (see cref="T:Microsoft.Extensions.Logging.ILoggerProvider" ) that writes logs to the
 Azure Analytics HTTP Data Collector API with file system fail-back
 
 	A significant challeng in this design is managing to the potentially disconnected 
@@ -11,18 +12,14 @@ Azure Analytics HTTP Data Collector API with file system fail-back
 	system logger when disconnected, and then purge the local log files when connectivity
 	returns. A maximum number of local log files and their maximum size can be set in 
 	the options, and any loss of data will be reported when connectivity retsumes.
-]]>
-</summary>
-<remarks>
-<![CDATA[
 	Initially I envisioned this derived from NetEscapades.Extensions.Logging.RollingFile.FileLogger
 	to handle the fail-back, but after some trial and error concluded that the LogMessage Type
 	desired for the Azure Data Collector Provider requires more structure than that required
 	by the FileLogger. Complicated largely by the definition of LogMessage as a Struct, so I've 
 	blatenly copied and modified the FileLogger as seems appropriate.
 	
-https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-data-collector-api This
-article shows you how to use the HTTP Data Collector API to send data to Log Analytics from
+https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-data-collector-api 
+This article shows you how to use the HTTP Data Collector API to send data to Log Analytics from
 a REST API client. It describes how to format data collected by your script or application,
 include it in a request, and have that request authorized by Log Analytics. Examples are
 provided for PowerShell, C#, and Python.
@@ -48,7 +45,7 @@ required for each request. We describe each attribute in more detail later in th
 Request URI
 - Attribute Property
 - Method POST
-- URI https://<CustomerId>.ods.opinsights.azure.com/api/logs?api-version=2016-04-01
+- URI https://{CustomerId}.ods.opinsights.azure.com/api/logs?api-version=2016-04-01
 - Content type application/json
     
 Request URI parameters
@@ -80,7 +77,7 @@ part of the request.
     
 Here's the format for the authorization header:
     
-Authorization: SharedKey <WorkspaceID>:<Signature>
+Authorization: SharedKey (WorkspaceID):(Signature)
     
 WorkspaceID is the unique identifier for the Log Analytics workspace. Signature is a
 Hash-based Message Authentication Code (HMAC) that is constructed from the request and then
@@ -300,6 +297,3 @@ For each sample, do these steps to set the variables for the authorization heade
 Next steps
     
 Use the Log Search API to retrieve data from the Log Analytics repository. https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-log-search-api
-    
-]]>
-</remarks>
