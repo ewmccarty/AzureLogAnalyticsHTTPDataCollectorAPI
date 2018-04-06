@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Erik W McCarty &lt;ewmccarty@gmail.com&gt;</Authors>
+    <Company>Walker Engineering, Inc</Company>
+    <Product>Azure HTTP Data Collector API Logging Provider</Product>
+    <Description>As of 01/23/2018 you can send data to Azure Log Analytics with the HTTP Data Collector API (public preview) from a REST API client. This package implements this as a Logging Provider for ASP.NET Standard 2.0</Description>
+    <PackageTags>ILogger, Log Analytics, Azure, HTTP Data Collector API, NETSTANDARD_20</PackageTags>
+    <PackageReleaseNotes>Referenced https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-data-collector-api and NetEscapades.Extensions.Logging.RollingFile during development</PackageReleaseNotes>
+    <Copyright>GNU</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="FileLogger\**" />
+    <Compile Remove="Internal\**" />
+    <Compile Remove="RollingFileLogger\Generic\**" />
+    <EmbeddedResource Remove="FileLogger\**" />
+    <EmbeddedResource Remove="Internal\**" />
+    <EmbeddedResource Remove="RollingFileLogger\Generic\**" />
+    <None Remove="FileLogger\**" />
+    <None Remove="Internal\**" />
+    <None Remove="RollingFileLogger\Generic\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="RollingFileLogger\LogMessage.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="11.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="2.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Mvc.Formatters.Json">
+      <HintPath>..\..\..\..\..\.nuget\packages\microsoft.aspnetcore.mvc.formatters.json\2.0.3\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Formatters.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging">
+      <HintPath>..\..\..\..\..\.nuget\packages\microsoft.extensions.logging\2.0.1\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\..\..\..\.nuget\packages\microsoft.extensions.logging.abstractions\2.0.1\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Internal\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AzureDataCollectorLoggingProvider.Interfaces\AzureDataCollectorLoggingProvider.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

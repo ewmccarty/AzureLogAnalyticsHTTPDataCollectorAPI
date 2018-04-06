@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ILogMessage.cs" />
+    <Compile Remove="LogMessage.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="2.0.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.2.1" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.2.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AzureDataCollectorLoggingProvider.Interfaces\AzureDataCollectorLoggingProvider.Interfaces.csproj" />
+    <ProjectReference Include="..\AzureDataCollectorLoggingProvider\AzureDataCollectorLoggingProvider.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\..\..\..\.nuget\packages\microsoft.extensions.logging.abstractions\2.0.1\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
