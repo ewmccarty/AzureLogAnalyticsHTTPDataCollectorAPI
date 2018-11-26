@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDataCollectorLoggingProvider", "AzureDataCollectorLoggingProvider\AzureDataCollectorLoggingProvider.csproj", "{751E82D8-41BE-4116-A7F0-CB27C3A49A70}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDataCollectorLoggingProvider.Interfaces", "AzureDataCollectorLoggingProvider.Interfaces\AzureDataCollectorLoggingProvider.Interfaces.csproj", "{E1294935-F8E9-4365-9C32-062B0E13F40C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureDataCollectorLoggingProvider.Tests", "AzureDataCollectorLoggingProvider.Tests\AzureDataCollectorLoggingProvider.Tests.csproj", "{394B70DC-0C0A-4594-8021-89449C31231D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E410ECBB-DD86-41D0-8A9C-197CEDE6233A}"
@@ -24,10 +22,6 @@ Global
 		{751E82D8-41BE-4116-A7F0-CB27C3A49A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{751E82D8-41BE-4116-A7F0-CB27C3A49A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{751E82D8-41BE-4116-A7F0-CB27C3A49A70}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E1294935-F8E9-4365-9C32-062B0E13F40C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E1294935-F8E9-4365-9C32-062B0E13F40C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E1294935-F8E9-4365-9C32-062B0E13F40C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E1294935-F8E9-4365-9C32-062B0E13F40C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{394B70DC-0C0A-4594-8021-89449C31231D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{394B70DC-0C0A-4594-8021-89449C31231D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{394B70DC-0C0A-4594-8021-89449C31231D}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -5,10 +5,10 @@
     <Optimize>true</Optimize>
     <Company>Walker Engineering, Inc</Company>
     <Copyright>Copyright © 2018</Copyright>
-    <PackageLicenseUrl>2.1.1</PackageLicenseUrl>
-    <AssemblyVersion>2.1.1.0</AssemblyVersion>
-    <FileVersion>2.1.1.0</FileVersion>
-    <Version>2.1.1</Version>
+    <PackageLicenseUrl>2.1.1.1</PackageLicenseUrl>
+    <AssemblyVersion>2.1.1.1</AssemblyVersion>
+    <FileVersion>2.1.1.1</FileVersion>
+    <Version>2.1.1.1</Version>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeFrameworkVersion>2.1.6</RuntimeFrameworkVersion>
     <SignAssembly>false</SignAssembly>
@@ -19,6 +19,8 @@
     <!-- Required in both test/product projects. This is a temporary workaround for https://github.com/Microsoft/vstest/issues/800 -->
     <DebugType>Full</DebugType>
     <IsPackable>false</IsPackable>
+    <RepositoryUrl>https://github.com/ewmccarty/AzureLogAnalyticsHTTPDataCollectorAPI</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ewmccarty/AzureLogAnalyticsHTTPDataCollectorAPI</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -35,7 +37,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AzureDataCollectorLoggingProvider.Interfaces\AzureDataCollectorLoggingProvider.Interfaces.csproj" />
     <ProjectReference Include="..\AzureDataCollectorLoggingProvider\AzureDataCollectorLoggingProvider.csproj" />
   </ItemGroup>
 

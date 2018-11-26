@@ -6,10 +6,10 @@
     <IsPackable>true</IsPackable>
     <Company>Walker Engineering, Inc</Company>
     <Copyright>Copyright © 2018</Copyright>
-    <PackageLicenseUrl>2.1.1</PackageLicenseUrl>
-    <AssemblyVersion>2.1.1.0</AssemblyVersion>
-    <FileVersion>2.1.1.0</FileVersion>
-    <Version>2.1.1</Version>
+    <PackageLicenseUrl></PackageLicenseUrl>
+    <AssemblyVersion>2.1.1.1</AssemblyVersion>
+    <FileVersion>2.1.1.1</FileVersion>
+    <Version>2.1.1.1</Version>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeFrameworkVersion>2.1.6</RuntimeFrameworkVersion>
     <SignAssembly>false</SignAssembly>
@@ -25,6 +25,8 @@
     <PackageTags>ILogger, Log Analytics, Azure, HTTP Data Collector API, NETSTANDARD_21</PackageTags>
     <PackageReleaseNotes>Referenced https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-data-collector-api and NetEscapades.Extensions.Logging.RollingFile during development</PackageReleaseNotes>
     <Copyright>GNU</Copyright>
+    <RepositoryUrl>https://github.com/ewmccarty/AzureLogAnalyticsHTTPDataCollectorAPI</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/ewmccarty/AzureLogAnalyticsHTTPDataCollectorAPI</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>
@@ -52,23 +54,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Microsoft.AspNetCore.Mvc.Formatters.Json">
-      <HintPath>..\..\..\..\..\.nuget\packages\microsoft.aspnetcore.mvc.formatters.json\2.0.3\lib\netstandard2.0\Microsoft.AspNetCore.Mvc.Formatters.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Extensions.Logging">
       <HintPath>..\..\..\..\..\.nuget\packages\microsoft.extensions.logging\2.0.1\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.Logging.Abstractions">
       <HintPath>..\..\..\..\..\.nuget\packages\microsoft.extensions.logging.abstractions\2.0.1\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Internal\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\AzureDataCollectorLoggingProvider.Interfaces\AzureDataCollectorLoggingProvider.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>
