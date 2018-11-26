@@ -1,8 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <ShowAllFiles>true</ShowAllFiles>
+    <Optimize>true</Optimize>
+    <Company>Walker Engineering, Inc</Company>
+    <Copyright>Copyright © 2018</Copyright>
+    <PackageLicenseUrl>2.1.1</PackageLicenseUrl>
+    <AssemblyVersion>2.1.1.0</AssemblyVersion>
+    <FileVersion>2.1.1.0</FileVersion>
+    <Version>2.1.1</Version>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-
+    <RuntimeFrameworkVersion>2.1.6</RuntimeFrameworkVersion>
+    <SignAssembly>false</SignAssembly>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.2</LangVersion>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <!-- Required in both test/product projects. This is a temporary workaround for https://github.com/Microsoft/vstest/issues/800 -->
+    <DebugType>Full</DebugType>
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
@@ -12,11 +27,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="2.1.0" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
-    <PackageReference Include="MSTest.TestAdapter" Version="1.3.2" />
-    <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="2.1.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.4.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
   </ItemGroup>
 
   <ItemGroup>

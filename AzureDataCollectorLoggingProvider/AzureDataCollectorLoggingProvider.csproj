@@ -1,22 +1,30 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <Authors>Erik W McCarty &lt;ewmccarty@gmail.com&gt;</Authors>
+    <ShowAllFiles>true</ShowAllFiles>
+    <Optimize>true</Optimize>
+    <IsPackable>true</IsPackable>
     <Company>Walker Engineering, Inc</Company>
+    <Copyright>Copyright © 2018</Copyright>
+    <PackageLicenseUrl>2.1.1</PackageLicenseUrl>
+    <AssemblyVersion>2.1.1.0</AssemblyVersion>
+    <FileVersion>2.1.1.0</FileVersion>
+    <Version>2.1.1</Version>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RuntimeFrameworkVersion>2.1.6</RuntimeFrameworkVersion>
+    <SignAssembly>false</SignAssembly>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.2</LangVersion>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <!-- Required in both test/product projects. This is a temporary workaround for https://github.com/Microsoft/vstest/issues/800 -->
+    <DebugType>Full</DebugType>
+    <Authors>Erik W McCarty &lt;ewmccarty@gmail.com&gt;</Authors>
     <Product>Azure HTTP Data Collector API Logging Provider</Product>
     <Description>As of 01/23/2018 you can send data to Azure Log Analytics with the HTTP Data Collector API (public preview) from a REST API client. This package implements this as a Logging Provider for ASP.NET Standard 2.0</Description>
-    <PackageTags>ILogger, Log Analytics, Azure, HTTP Data Collector API, NETSTANDARD_20</PackageTags>
+    <PackageTags>ILogger, Log Analytics, Azure, HTTP Data Collector API, NETSTANDARD_21</PackageTags>
     <PackageReleaseNotes>Referenced https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-data-collector-api and NetEscapades.Extensions.Logging.RollingFile during development</PackageReleaseNotes>
     <Copyright>GNU</Copyright>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <LangVersion>7.1</LangVersion>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <LangVersion>7.1</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,10 +44,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="JetBrains.Annotations" Version="11.1.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="2.1.0" />
+    <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="2.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
   </ItemGroup>
 

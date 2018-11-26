@@ -1,13 +1,30 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <ShowAllFiles>true</ShowAllFiles>
+    <Optimize>true</Optimize>
+    <IsPackable>true</IsPackable>
+    <Company>Walker Engineering, Inc</Company>
+    <Copyright>Copyright © 2018</Copyright>
+    <PackageLicenseUrl>2.1.1</PackageLicenseUrl>
+    <AssemblyVersion>2.1.1.0</AssemblyVersion>
+    <FileVersion>2.1.1.0</FileVersion>
+    <Version>2.1.1</Version>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RuntimeFrameworkVersion>2.1.6</RuntimeFrameworkVersion>
+    <SignAssembly>false</SignAssembly>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.2</LangVersion>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <!-- Required in both test/product projects. This is a temporary workaround for https://github.com/Microsoft/vstest/issues/800 -->
+    <DebugType>Full</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="JetBrains.Annotations" Version="11.1.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="2.1.0" />
+    <PackageReference Include="JetBrains.Annotations" Version="2018.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.AzureAppServices" Version="2.1.1" />
   </ItemGroup>
 
   <ItemGroup>
