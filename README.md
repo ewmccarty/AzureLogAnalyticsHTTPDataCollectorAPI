@@ -1,5 +1,5 @@
 # AzureLogAnalyticsHTTPDataCollectorAPI
-.NET Standard 2.0 Logger Provider for the Azure HTTP Data Collector API (public preview) in Log Analytics 
+.NET Standard 2.1 Logger Provider for the Azure HTTP Data Collector API (public preview) in Log Analytics 
 
 https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-data-collector-api
 (Much of the content from the above page is copied herein as the author may make changes)
@@ -65,7 +65,7 @@ Header Description
 - x-ms-date The date that the request was processed, in RFC 1123 format.
 - time-generated-field The name of a field in the data that contains the timestamp of the
   data item. If you specify a field then its contents are used for TimeGenerated. If this
-  field isn’t specified, the default for TimeGenerated is the time that the message is
+  field isnâ€™t specified, the default for TimeGenerated is the time that the message is
   ingested. The contents of the message field should follow the ISO 8601 format YYYY-MM-DDThh:mm:ssZ.
     
 Authorization
@@ -156,8 +156,8 @@ for the new record already exists.
 - If the record type does not exist, Log Analytics creates a new one. Log Analytics uses the
   JSON type inference to determine the data type for each property for the new record.
 - If the record type does exist, Log Analytics attempts to create a new record based on
-  existing properties. If the data type for a property in the new record doesn’t match and
-  can’t be converted to the existing type, or if the record includes a property that doesn’t
+  existing properties. If the data type for a property in the new record doesnâ€™t match and
+  canâ€™t be converted to the existing type, or if the record includes a property that doesnâ€™t
   exist, Log Analytics creates a new property that has the relevant suffix.
     
 For example, this submission entry would create a record with three properties, number_d,
@@ -254,9 +254,9 @@ Code Status Error code Description
 - 400 Bad request InvalidDataFormat Invalid JSON was submitted. The response body might
   contain more information about how to resolve the error.
 - 400 Bad request InvalidLogType The log type specified contained special characters or numerics.
-- 400 Bad request MissingApiVersion The API version wasn’t specified.
-- 400 Bad request MissingContentType The content type wasn’t specified.
-- 400 Bad request MissingLogType The required value log type wasn’t specified.
+- 400 Bad request MissingApiVersion The API version wasnâ€™t specified.
+- 400 Bad request MissingContentType The content type wasnâ€™t specified.
+- 400 Bad request MissingLogType The required value log type wasnâ€™t specified.
 - 400 Bad request UnsupportedContentType The content type was not set to application/json.
 - 403 Forbidden InvalidAuthorization The service failed to authenticate the request. Verify
   that the workspace ID and connection key are valid.
